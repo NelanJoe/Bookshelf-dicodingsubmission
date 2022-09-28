@@ -73,6 +73,7 @@ main {
 .input_section > form > .input > label {
   color: cornflowerblue;
   font-weight: bold;
+  margin-bottom: 0.4rem;
 }
 
 .input_section > form > .input_inline {
@@ -104,19 +105,20 @@ main {
 .search_section > form {
   padding: 16px;
   width: 100%;
-  display: grid;
-  grid-template-columns: auto 1fr 0.5fr;
-  grid-gap: 10px;
 }
 
 .search_section > form > label {
+  color: cornflowerblue;
+  font-weight: bold;
   display: flex;
   align-items: center;
+  margin-bottom: .4rem;
 }
 
 .search_section > form > input {
-  padding: 5px;
+  padding: 0.4rem;
   border-radius: 5px;
+  width: 86%;
 }
 
 .search_section > form > button {
@@ -125,6 +127,7 @@ main {
   border: 0;
   border-radius: 5px;
   cursor: pointer;
+  padding: 0.5rem 2rem;
 }
 
 .book_shelf {
@@ -170,4 +173,29 @@ p {
 .book_shelf > .book_list > .book_item > .action > .red {
   background-color: darkred;
   color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .search_section > form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .search_section > form > label {
+    margin-bottom: 0.4rem;
+  }
+
+  .search_section > form > input {
+    width: 100%;
+    margin-bottom: 0.4rem;
+  }
+
+  .book_shelf > .book_list > .book_item > .action {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .book_shelf > .book_list > .book_item > .action > button {
+    margin-bottom: 0.4rem;
+  }
 }
